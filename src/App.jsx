@@ -137,7 +137,7 @@ const App = () => {
           </span>
           {res?.positive_tweets.map((tweet) => (
             <div className="p-2 bg-green-500 rounded-lg border border-gray-300">
-              <p className="text-white">{tweet}</p>
+              <p className="text-white text-lg">{tweet}</p>
             </div>
           ))}
 
@@ -148,7 +148,7 @@ const App = () => {
           </span>
           {res?.negative_tweets.map((tweet) => (
             <div className="p-2 bg-red-500 rounded-lg border border-gray-300">
-              <p className="text-white">{tweet}</p>
+              <p className="text-white text-lg">{tweet}</p>
             </div>
           ))}
           <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" />
@@ -157,7 +157,7 @@ const App = () => {
           </span>
           {res?.neutral_tweets.map((tweet) => (
             <div className="p-2 bg-[#03a9f4] rounded-lg border border-gray-300">
-              <p className="text-white">{tweet}</p>
+              <p className="text-white text-lg">{tweet}</p>
             </div>
           ))}
         </div>
