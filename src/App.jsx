@@ -70,7 +70,7 @@ const App = () => {
     handleAnalyze();
   }, []);
   return (
-    <div className="flex flex-col w-screen h-screen bg-black">
+    <div className="flex flex-col w-screen h-screen bg-[rgb(18,18,18)]">
       <div className="grid grid-cols-12 h-full">
         <div className="flex flex-col col-span-2 px-4 py-6 gap-8 h-full">
           <div className="flex flex-col justify-center items-center gap-2 p-4 border border-blue-500 rounded">
@@ -113,7 +113,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 col-span-10 p-4 overflow-auto">
+        <div className="flex flex-col gap-2 col-span-10 p-4 overflow-auto">
           <div class="pt-2 relative mx-auto text-gray-600 w-1/2">
             <input
               class="border-2 border-[#1DA1F2] bg-black text-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none w-full"
@@ -132,7 +132,7 @@ const App = () => {
               <Icon />
             </button>
           </div>
-          <span className="font-bold text-2xl bg-green-500  text-white px-4 py-2 rounded-full max-w-min">
+          <span className="font-bold mb-1 text-2xl bg-green-500  text-white px-4 py-2 rounded-full max-w-min">
             Positive
           </span>
           {res?.positive_tweets.map((tweet) => (
@@ -141,9 +141,9 @@ const App = () => {
             </div>
           ))}
 
-          <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" />
+          {/* <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" /> */}
 
-          <span className="font-bold text-2xl bg-red-500  text-white px-4 py-2 rounded-full max-w-min">
+          <span className="font-bold mb-1 mt-8 text-2xl bg-red-500  text-white px-4 py-2 rounded-full max-w-min">
             Negative
           </span>
           {res?.negative_tweets.map((tweet) => (
@@ -151,8 +151,8 @@ const App = () => {
               <p className="text-white text-base">{tweet}</p>
             </div>
           ))}
-          <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" />
-          <span className="font-bold text-2xl bg-[#03a9f4] text-white px-4 py-2 rounded-full max-w-min">
+          {/* <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" /> */}
+          <span className="font-bold mb-1 mt-8 text-2xl bg-[#03a9f4] text-white px-4 py-2 rounded-full max-w-min">
             Neutral
           </span>
           {res?.neutral_tweets.map((tweet) => (
