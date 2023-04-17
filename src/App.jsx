@@ -88,27 +88,27 @@ const App = () => {
               Analyzer
             </span>
           </div>
-          <div className="border border-white rounded-lg bg-green-500">
-            <div className="border-b border-white text-2xl font-semibold text-center py-2 text-white ">
+          <div className="rounded-lg bg-green-500">
+            <div className="border-b-2 border-white text-2xl font-semibold text-center py-2 text-white ">
               Positive 😊
             </div>
-            <div className="p-4 text-5xl text-center text-white">
+            <div className="p-4 text-4xl text-center text-white">
               {res ? Number(res["positive_percent"].toFixed(2)) + "%" : "N/A"}
             </div>
           </div>
-          <div className="border border-white rounded-lg bg-red-500">
-            <div className="border-b border-white text-2xl font-semibold text-center py-2 text-white ">
+          <div className="rounded-lg bg-red-500">
+            <div className="border-b-2 border-white text-2xl font-semibold text-center py-2 text-white ">
               Negative 😤
             </div>
-            <div className="p-4 text-5xl text-center text-white">
+            <div className="p-4 text-4xl text-center text-white">
               {res ? Number(res["negative_percent"].toFixed(2)) + "%" : "N/A"}
             </div>
           </div>
-          <div className="border border-white rounded-lg bg-[#03a9f4]">
-            <div className="border-b border-white text-2xl font-semibold text-center py-2 text-white ">
+          <div className="rounded-lg bg-[#03a9f4]">
+            <div className="border-b-2 border-white text-2xl font-semibold text-center py-2 text-white ">
               Neutral 😐
             </div>
-            <div className="p-4 text-5xl text-center text-white">
+            <div className="p-4 text-4xl text-center text-white">
               {res ? Number(res["neutral_percent"].toFixed(2)) + "%" : "N/A"}
             </div>
           </div>
@@ -132,32 +132,32 @@ const App = () => {
               <Icon />
             </button>
           </div>
-          <span className="font-bold text-2xl bg-green-500  text-white px-4 py-2 rounded-full max-w-min border-white border">
+          <span className="font-bold text-2xl bg-green-500  text-white px-4 py-2 rounded-full max-w-min">
             Positive
           </span>
           {res?.positive_tweets.map((tweet) => (
-            <div className="p-2 bg-green-500 rounded-lg border border-gray-300">
-              <p className="text-white text-lg">{tweet}</p>
+            <div className="p-2 bg-green-500 rounded-md bg-opacity-25">
+              <p className="text-white text-base">{tweet}</p>
             </div>
           ))}
 
           <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" />
 
-          <span className="font-bold text-2xl bg-red-500  text-white px-4 py-2 rounded-full max-w-min border-white border">
+          <span className="font-bold text-2xl bg-red-500  text-white px-4 py-2 rounded-full max-w-min">
             Negative
           </span>
           {res?.negative_tweets.map((tweet) => (
-            <div className="p-2 bg-red-500 rounded-lg border border-gray-300">
-              <p className="text-white text-lg">{tweet}</p>
+            <div className="p-2 bg-red-500 rounded-md bg-opacity-25">
+              <p className="text-white text-base">{tweet}</p>
             </div>
           ))}
           <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" />
-          <span className="font-bold text-2xl bg-[#03a9f4] text-white px-4 py-2 rounded-full max-w-min border-white border">
+          <span className="font-bold text-2xl bg-[#03a9f4] text-white px-4 py-2 rounded-full max-w-min">
             Neutral
           </span>
           {res?.neutral_tweets.map((tweet) => (
-            <div className="p-2 bg-[#03a9f4] rounded-lg border border-gray-300">
-              <p className="text-white text-lg">{tweet}</p>
+            <div className="p-2 bg-[#03a9f4] rounded-md bg-opacity-25">
+              <p className="text-white text-base">{tweet}</p>
             </div>
           ))}
         </div>
