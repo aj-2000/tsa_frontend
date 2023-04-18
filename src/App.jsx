@@ -57,7 +57,6 @@ const App = () => {
           params: { query, count },
         }
       );
-      console.log(res.data);
       setRes(res.data);
     } catch (e) {
       console.error(e.message);
@@ -139,9 +138,14 @@ const App = () => {
             Positive
           </section>
           {res?.positive_tweets.map((tweet) => (
-            <div className="p-2 bg-green-500 rounded-md bg-opacity-25">
-              <p className="text-white text-base">{tweet}</p>
-            </div>
+            <a
+              href={tweet?.url}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="p-2 bg-gray-600 rounded-md bg-opacity-25"
+            >
+              <p className="text-white text-base">{tweet?.text}</p>
+            </a>
           ))}
 
           {/* <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" /> */}
@@ -153,9 +157,14 @@ const App = () => {
             Negative
           </section>
           {res?.negative_tweets.map((tweet) => (
-            <div className="p-2 bg-red-500 rounded-md bg-opacity-25">
-              <p className="text-white text-base">{tweet}</p>
-            </div>
+            <a
+              rel="noopener noreferrer"
+              href={tweet?.url}
+              target="_blank"
+              className="p-2 bg-gray-600 rounded-md bg-opacity-25"
+            >
+              <p className="text-white text-base">{tweet?.text}</p>
+            </a>
           ))}
           {/* <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" /> */}
           <section
@@ -165,9 +174,14 @@ const App = () => {
             Neutral
           </section>
           {res?.neutral_tweets.map((tweet) => (
-            <div className="p-2 bg-[#03a9f4] rounded-md bg-opacity-25">
-              <p className="text-white text-base">{tweet}</p>
-            </div>
+            <a
+              rel="noopener noreferrer"
+              href={tweet?.url}
+              target="_blank"
+              className="p-2 bg-gray-600 rounded-md bg-opacity-25"
+            >
+              <p className="text-white text-base">{tweet?.text}</p>
+            </a>
           ))}
         </div>
       </div>
