@@ -88,30 +88,30 @@ const App = () => {
               Analyzer
             </span>
           </div>
-          <div className="rounded-lg bg-green-500">
+          <a href="/#positive" className="rounded-lg bg-green-500">
             <div className="border-b-2 border-white text-2xl font-semibold text-center py-2 text-white ">
               Positive 😊
             </div>
             <div className="p-4 text-4xl text-center text-white">
               {res ? Number(res["positive_percent"].toFixed(2)) + "%" : "N/A"}
             </div>
-          </div>
-          <div className="rounded-lg bg-red-500">
+          </a>
+          <a href="/#negative" className="rounded-lg bg-red-500">
             <div className="border-b-2 border-white text-2xl font-semibold text-center py-2 text-white ">
               Negative 😤
             </div>
             <div className="p-4 text-4xl text-center text-white">
               {res ? Number(res["negative_percent"].toFixed(2)) + "%" : "N/A"}
             </div>
-          </div>
-          <div className="rounded-lg bg-[#03a9f4]">
+          </a>
+          <a href="/#neutral" className="rounded-lg bg-[#03a9f4]">
             <div className="border-b-2 border-white text-2xl font-semibold text-center py-2 text-white ">
               Neutral 😐
             </div>
             <div className="p-4 text-4xl text-center text-white">
               {res ? Number(res["neutral_percent"].toFixed(2)) + "%" : "N/A"}
             </div>
-          </div>
+          </a>
         </div>
         <div className="flex flex-col gap-2 col-span-10 p-4 overflow-auto">
           <div class="pt-2 relative mx-auto text-gray-600 w-1/2">
@@ -132,9 +132,12 @@ const App = () => {
               <Icon />
             </button>
           </div>
-          <span className="font-bold mb-1 text-2xl bg-green-500  text-white px-4 py-2 rounded-full max-w-min">
+          <section
+            id="positive"
+            className="font-bold mb-1 text-2xl bg-green-500  text-white px-4 py-2 rounded-full max-w-min"
+          >
             Positive
-          </span>
+          </section>
           {res?.positive_tweets.map((tweet) => (
             <div className="p-2 bg-green-500 rounded-md bg-opacity-25">
               <p className="text-white text-base">{tweet}</p>
@@ -143,18 +146,24 @@ const App = () => {
 
           {/* <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" /> */}
 
-          <span className="font-bold mb-1 mt-8 text-2xl bg-red-500  text-white px-4 py-2 rounded-full max-w-min">
+          <section
+            id="negative"
+            className="font-bold mb-1 mt-8 text-2xl bg-red-500  text-white px-4 py-2 rounded-full max-w-min"
+          >
             Negative
-          </span>
+          </section>
           {res?.negative_tweets.map((tweet) => (
             <div className="p-2 bg-red-500 rounded-md bg-opacity-25">
               <p className="text-white text-base">{tweet}</p>
             </div>
           ))}
           {/* <div className="min-h-[0.5px] my-4 bg-gray-400 w-full rounded-full" /> */}
-          <span className="font-bold mb-1 mt-8 text-2xl bg-[#03a9f4] text-white px-4 py-2 rounded-full max-w-min">
+          <section
+            id="neutral"
+            className="font-bold mb-1 mt-8 text-2xl bg-[#03a9f4] text-white px-4 py-2 rounded-full max-w-min"
+          >
             Neutral
-          </span>
+          </section>
           {res?.neutral_tweets.map((tweet) => (
             <div className="p-2 bg-[#03a9f4] rounded-md bg-opacity-25">
               <p className="text-white text-base">{tweet}</p>
