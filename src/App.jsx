@@ -52,7 +52,7 @@ const App = () => {
     setRes(null);
     try {
       const res = await axios.get(
-        "https://tsa-backend.onrender.com/api/tweets",
+        "https://tsa-backend-production.up.railway.app/api/tweets",
         {
           params: { query, count },
         }
